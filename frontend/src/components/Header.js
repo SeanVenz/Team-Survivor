@@ -10,9 +10,13 @@ function Header() {
 
   return (
     <div className="navigation">
-      <div className="navigation container-padding">
-        <div>TEST</div>
-        <button onClick={scrollToTesterSection}>TESAET</button>
+      <div className="nav-header container-padding">
+        <div className="justify-right">
+          <span onClick={scrollToTesterSection}>HOME</span>
+          <span>ABOUT</span>
+          <span>INSTRUCTION</span>
+        </div>
+        <button onClick={scrollToTesterSection}>TRANSCRIBE</button>
       </div>
     </div>
   );
