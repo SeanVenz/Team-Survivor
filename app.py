@@ -1,3 +1,10 @@
+from transformers import BertTokenizer, BertForSequenceClassification
+from torch.utils.data import DataLoader, Dataset
+import speech_recognition as sr
+import pandas as pd
+import torch.nn as nn
+from sklearn.model_selection import train_test_split
+from torch.nn.utils.rnn import pad_sequence
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import speech_recognition as sr
@@ -6,6 +13,12 @@ from mtranslate import translate as mtranslate
 
 app = Flask(__name__)
 CORS(app)
+
+# Load the fine-tuned BERT tokenizer for Cebuano to English translation (uncomment after training)
+# tokenizer = BertTokenizer.from_pretrained("./fine_tuned_bert_modelCeb-Eng")
+
+# Load the fine-tuned BERT model for Cebuano to English translation
+# model = BertForSequenceClassification.from_pretrained("./fine_tuned_bert_modelCeb-Eng")
 
 def translate_text(text, target_language='en'):
     try:
@@ -22,8 +35,6 @@ def transcribe_audio(audio_file):
     
     with sr.AudioFile('converted_audio.wav') as source:
         audio = recognizer.record(source)  # Read the entire audio file
-
-    # Transcribe audio using Google Speech Recognition
     try:
         transcription = recognizer.recognize_google(audio)
         return transcription
