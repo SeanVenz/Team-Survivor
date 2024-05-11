@@ -82,8 +82,11 @@ function Transcribe() {
   };
 
   return (
-    <div>
-      <input type="file" accept="audio/*" onChange={handleFileUpload} />
+    <div className="transcribe">
+      <div className="fileupload-container">
+        <input type="file" accept="audio/*" onChange={handleFileUpload} />
+      </div>
+
       <button onClick={startRecording}>Start Recording</button>
       <button onClick={stopRecording}>Stop Recording</button>
       {transcription && <p>Transcription: {transcription}</p>}

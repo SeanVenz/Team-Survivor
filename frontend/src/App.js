@@ -25,15 +25,13 @@ function App() {
         <Authors />
       </section>
 
-      <section id="instruction" className="home">
+      {/* <section id="instruction" className="home">
         <Instruction />
-      </section>
+      </section> */}
 
       <section id="transcribe" className="home">
         <Transcribe />
       </section>
-
-      <section id="tester-section">tester</section>
     </main>
   );
 }
