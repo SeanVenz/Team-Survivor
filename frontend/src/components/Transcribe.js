@@ -3,6 +3,7 @@ import axios from "axios";
 
 function Transcribe() {
   const [translation, setTranslation] = useState("");
+  const [transcription, setTranscription] = useState("");
   const mediaRecorder = useRef(null);
 
   const startRecording = () => {
