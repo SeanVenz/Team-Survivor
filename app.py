@@ -20,6 +20,7 @@ CORS(app)
 # Load the fine-tuned BERT model for Cebuano to English translation
 # model = BertForSequenceClassification.from_pretrained("./fine_tuned_bert_modelCeb-Eng")
 
+#translate the bisaya audio to english
 def translate_text(text, target_language='en'):
     try:
         translated_text = mtranslate(text, target_language)
@@ -27,7 +28,8 @@ def translate_text(text, target_language='en'):
     except Exception as e:
         print(f"Translation failed: {e}")
         return None
-    
+
+#transcribe the audio received from file
 def transcribe_audio(audio_file):
     recognizer = sr.Recognizer()
     audio = AudioSegment.from_file(audio_file)
@@ -45,6 +47,7 @@ def transcribe_audio(audio_file):
 
     return None
 
+#API to connect to frontend
 @app.route('/translate', methods=['POST'])
 def translate_audio():
     if 'audio' not in request.files:
