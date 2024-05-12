@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import Authors from "./components/Authors";
 import Instruction from "./components/Instruction";
 import Transcribe from "./components/Transcribe";
+import HeaderImage from "./images/imageBanner.png";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
 
       <section id="home" className="home-section">
         <div className="home-image">
-          We can insert image here (idk unsa na image)
+          <img src={HeaderImage} className="header-image" />
         </div>
         <Body />
       </section>

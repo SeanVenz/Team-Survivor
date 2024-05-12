@@ -1,9 +1,9 @@
 import React from "react";
 
 function Header() {
-  const scrollToTesterSection = () => {
+  const scrollToSection = (section) => {
     // Find the section element with the word "tester"
-    const testerSection = document.getElementById("tester-section");
+    const testerSection = document.getElementById(section);
     // Scroll to the top of the testerSection
     testerSection.scrollIntoView({ behavior: "smooth" });
   };
@@ -12,11 +12,10 @@ function Header() {
     <div className="navigation">
       <div className="nav-header container-padding">
         <div className="justify-right">
-          <span onClick={scrollToTesterSection}>HOME</span>
-          <span>ABOUT</span>
-          <span>INSTRUCTION</span>
+          <span onClick={() => scrollToSection("home")}>HOME</span>
+          <span onClick={() => scrollToSection("authors")}>AUTHORS</span>
+          <span onClick={() => scrollToSection("transcribe")}>TRANSCRIBE</span>
         </div>
-        <button onClick={scrollToTesterSection}>TRANSCRIBE</button>
       </div>
     </div>
   );

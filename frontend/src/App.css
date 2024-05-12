@@ -52,8 +52,14 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
   overflow-x: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-top: -10px;
 }
 
 /* SHAPES */
@@ -85,6 +91,7 @@
   justify-content: right;
   gap: 50px;
   padding-right: 50px;
+  align-items: center;
 }
 
 .container-padding {
@@ -98,6 +105,7 @@
   width: 100%;
   background-color: #500e10;
   color: white;
+  z-index: 100;
 }
 
 .titleFont {
@@ -108,7 +116,11 @@
   display: flex;
   width: 100%;
   font-family: BebasNeue;
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.navigation .nav-header:hover {
+  text-decoration: underline;
 }
 
 .navigation span {
@@ -130,8 +142,9 @@
 
 .home {
   display: flex;
-
   width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .home .home-container {
@@ -144,12 +157,13 @@
 .home .title-container {
   font-family: BebasNeue;
   font-size: 100px;
+  padding: 50px;
 }
 
 .home .description-container {
   font-family: BarlowRegular;
   font-size: 20px;
-  padding: 30px;
+  padding: 50px;
 }
 
 .authors {
@@ -220,4 +234,23 @@
   display: flex;
   border: #500e10;
   border-width: 2px;
+}
+
+.input {
+  max-width: 190px;
+  display: none;
+}
+
+.labelFile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  height: 190px;
+  border: 2px dashed #ccc;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  color: #404040;
+  cursor: pointer;
 }
