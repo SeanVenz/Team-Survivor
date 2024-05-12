@@ -62,6 +62,13 @@
   margin-top: -10px;
 }
 
+.link-text {
+  cursor: pointer;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
 /* SHAPES */
 .circle {
   width: 200px;
@@ -69,6 +76,8 @@
   background-color: white;
   border-radius: 50%;
   z-index: 3;
+  background-size: cover;
+  background-position: center;
 }
 
 .flex-row {
@@ -256,9 +265,12 @@
 .authors .details {
   width: 100%;
   margin: 20px;
+  height: 100%;
+  padding: 20px;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .authors .author-details {

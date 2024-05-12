@@ -116,7 +116,7 @@ function Transcribe() {
                 setRecording(!recording);
               }}
             >
-              {recording ? (
+              {!recording ? (
                 <>
                   <FaMicrophone className="record-button" /> Record
                 </>
