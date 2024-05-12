@@ -12,9 +12,24 @@ function Header() {
     <div className="navigation">
       <div className="nav-header container-padding">
         <div className="justify-right">
-          <span onClick={() => scrollToSection("home")}>HOME</span>
-          <span onClick={() => scrollToSection("authors")}>AUTHORS</span>
-          <span onClick={() => scrollToSection("transcribe")}>TRANSCRIBE</span>
+          <span
+            className=" indiv-header"
+            onClick={() => scrollToSection("home")}
+          >
+            HOME
+          </span>
+          <span
+            className=" indiv-header"
+            onClick={() => scrollToSection("authors")}
+          >
+            AUTHORS
+          </span>
+          <span
+            className=" indiv-header"
+            onClick={() => scrollToSection("transcribe")}
+          >
+            TRANSCRIBE
+          </span>
         </div>
       </div>
     </div>

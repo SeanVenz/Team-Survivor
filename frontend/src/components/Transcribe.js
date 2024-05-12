@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
+import { MdOutlineFileUpload } from "react-icons/md";
 
 function Transcribe() {
   const [translation, setTranslation] = useState("");
@@ -84,9 +85,12 @@ function Transcribe() {
   return (
     <div className="transcribe">
       <label for="file" class="labelFile">
-        <span></span>
-        <p>drag and drop your file here or click to select a file!</p>
+        <p className="flex-col items-center">
+          <span>drag and drop your file here or click to select a file!</span>
+          <MdOutlineFileUpload className="uploadIcon" />
+        </p>
       </label>
+
       <input
         class="input"
         name="text"
@@ -98,7 +102,10 @@ function Transcribe() {
 
       <button onClick={startRecording}>Start Recording</button>
       <button onClick={stopRecording}>Stop Recording</button>
-      {transcription && <p>Transcription: {transcription}</p>}
+
+      <span>TEST</span>
+      {/* <span>Test2</span>
+      {transcription && <p>Transcription: {transcription}</p>} */}
       {translation && <p>Translation: {translation}</p>}
     </div>
   );

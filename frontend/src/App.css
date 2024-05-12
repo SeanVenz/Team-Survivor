@@ -119,7 +119,7 @@
   font-size: 25px;
 }
 
-.navigation .nav-header:hover {
+.navigation .indiv-header:hover {
   text-decoration: underline;
 }
 
@@ -225,7 +225,16 @@
 }
 
 .transcribe {
-  margin-top: 20px;
+  padding: 50px;
+}
+
+.uploadIcon {
+  font-size: 80px;
+}
+
+.items-center {
+  align-items: center;
+  width: 100%;
 }
 
 .transcribe .fileupload-container {
