@@ -22,7 +22,7 @@ function Authors() {
         <div className="circle" />
         <div className="author-container">
           <div className="author-details titleFont authorName">
-            Sean Venz Quijano
+            ESTRELLA ABUEVA
           </div>
           <div className="details">
             <span>Tiktok</span>
@@ -36,7 +36,7 @@ function Authors() {
         <div className="circle" />
         <div className="author-container">
           <div className="author-details titleFont authorName">
-            Sean Venz Quijano
+            KENT STEPHEN SUMALINOG
           </div>
           <div className="details">
             <span>Tiktok</span>

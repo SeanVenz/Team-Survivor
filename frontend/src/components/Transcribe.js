@@ -6,7 +6,7 @@ import { FaMicrophoneSlash } from "react-icons/fa";
 
 function Transcribe() {
   const [recording, setRecording] = useState(false);
-  const [translation, setTranslation] = useState("tete");
+  const [translation, setTranslation] = useState("");
   const [transcription, setTranscription] = useState("");
   const mediaRecorder = useRef(null);
 
