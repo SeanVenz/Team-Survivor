@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import { MdOutlineFileUpload } from "react-icons/md";
+import { FaMicrophone } from "react-icons/fa";
+import { FaMicrophoneSlash } from "react-icons/fa";
 
 function Transcribe() {
-  const [translation, setTranslation] = useState("");
+  const [recording, setRecording] = useState(false);
+  const [translation, setTranslation] = useState("tete");
   const [transcription, setTranscription] = useState("");
   const mediaRecorder = useRef(null);
 
@@ -84,29 +87,62 @@ function Transcribe() {
 
   return (
     <div className="transcribe">
-      <label for="file" class="labelFile">
-        <p className="flex-col items-center">
-          <span>drag and drop your file here or click to select a file!</span>
-          <MdOutlineFileUpload className="uploadIcon" />
+      <div className="insert-container">
+        <div className="audio-insert">
+          <div>
+            <label for="file" class="labelFile">
+              <p className="flex-col items-center">
+                <span>
+                  drag and drop your file here or click to select a file!
+                </span>
+                <MdOutlineFileUpload className="uploadIcon" />
+              </p>
+            </label>
+
+            <input
+              class="input"
+              name="text"
+              id="file"
+              type="file"
+              accept="audio/*, video/*"
+              onChange={handleFileUpload}
+            />
+          </div>
+          <div className="button-container">
+            <button
+              className="audio-button"
+              onClick={() => {
+                recording ? stopRecording() : startRecording();
+                setRecording(!recording);
+              }}
+            >
+              {recording ? (
+                <>
+                  <FaMicrophone className="record-button" /> Record
+                </>
+              ) : (
+                <>
+                  <FaMicrophoneSlash className="record-button" />
+                  Stop Recording
+                </>
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="translate-container">
+        <p className="translation-output">
+          {translation && <p>{translation}</p>}
         </p>
-      </label>
-
-      <input
-        class="input"
-        name="text"
-        id="file"
-        type="file"
-        accept="audio/*, video/*"
-        onChange={handleFileUpload}
-      />
-
-      <button onClick={startRecording}>Start Recording</button>
-      <button onClick={stopRecording}>Stop Recording</button>
-
-      <span>TEST</span>
+        <div className="button-container">
+          <button className="audio-button" onClick={() => setTranslation("")}>
+            Clear
+          </button>
+        </div>
+      </div>
       {/* <span>Test2</span>
       {transcription && <p>Transcription: {transcription}</p>} */}
-      {translation && <p>Translation: {translation}</p>}
     </div>
   );
 }

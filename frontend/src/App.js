@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
-import axios from "axios";
 import "./App.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Authors from "./components/Authors";
-import Instruction from "./components/Instruction";
 import Transcribe from "./components/Transcribe";
 import HeaderImage from "./images/imageBanner.png";
 
@@ -22,9 +20,8 @@ function App() {
         <Body />
       </section>
 
-      <section id="authors" className="home">
-        <Authors />
-      </section>
+      <section id="authors" className="home" />
+      <Authors />
 
       {/* <section id="instruction" className="home">
         <Instruction />

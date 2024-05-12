@@ -3,9 +3,13 @@ import React from "react";
 function Header() {
   const scrollToSection = (section) => {
     // Find the section element with the word "tester"
-    const testerSection = document.getElementById(section);
+    const goToSection = document.getElementById(section);
     // Scroll to the top of the testerSection
-    testerSection.scrollIntoView({ behavior: "smooth" });
+    goToSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      offsetTop: 20,
+    });
   };
 
   return (
