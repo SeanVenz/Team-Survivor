@@ -20,16 +20,14 @@ function App() {
         <Body />
       </section>
 
-      <section id="authors" className="home" />
-      <Authors />
-
       {/* <section id="instruction" className="home">
         <Instruction />
       </section> */}
 
-      <section id="transcribe" className="home">
-        <Transcribe />
-      </section>
+      <section id="transcribe" className="home" />
+      <Transcribe />
+      <section id="authors" className="home" />
+      <Authors />
     </main>
   );
 }
