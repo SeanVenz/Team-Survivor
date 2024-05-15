@@ -15,10 +15,10 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the fine-tuned BERT tokenizer for Cebuano to English translation (uncomment after training)
-# tokenizer = BertTokenizer.from_pretrained("./fine_tuned_bert_modelCeb-Eng")
+tokenizer = BertTokenizer.from_pretrained("./fine_tuned_bert_modelCeb-Eng")
 
 # Load the fine-tuned BERT model for Cebuano to English translation
-# model = BertForSequenceClassification.from_pretrained("./fine_tuned_bert_modelCeb-Eng")
+model = BertForSequenceClassification.from_pretrained("./fine_tuned_bert_modelCeb-Eng")
 
 #translate the bisaya audio to english
 def translate_text(text, target_language='en'):
