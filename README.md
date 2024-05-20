@@ -2,11 +2,13 @@
 
 Transcription plays a crucial role in various fields such as language research, education, and accessibility. However, transcribing spoken words from one language to another accurately and efficiently remains a challenging task, especially for languages with limited available resources. In this research, we propose a methodology for transcribing Bisaya spoken words into English by simply fine-tuning BERT Model. 
 
+
 ## <b> BERT Model </b>
 
 The BERT, which stands for Bidirectional Encoder Representations from Transformers, is a pretraining approach that uses an LM goal and a Transformer encoder architecture. BERT's full potential can only be realized using a pretraining-fine-tuning paradigm, in which the model is first trained on a large-scale unlabeled text dataset, and then all/some parameters are fine-tuned on a labeled dataset for the downstream job.
 
 The BERT model was first used primarily for NLP tasks, such as token-level and sequence-level categorization, question answering, document summarization, information retrieval, machine translation, and so on. There have also been attempts to merge BERT into ASR including restoring and creating soft labels for training. This section covers the fundamentals of BERT.
+
 
 ### <b> Fine-Tuning BERT MODEL </b>
 
@@ -25,23 +27,25 @@ The provided spreadsheet contains valuable linguistic data, including file names
 
 This website is dedicated to improving the translation of Bisaya spoken words into English by leveraging advanced BERT models. The goal is to make videos containing Bisaya speech more accessible and comprehensible to a wider audience by ensuring accurate translations. The content on the webpage emphasizes the importance of accurate translation in bridging language gaps, particularly in educational and professional contexts where understanding spoken Bisaya is crucial. It serves as a platform for both linguistic research and practical application, helping users to transcribe and translate spoken Bisaya into English efficiently. 
 
+
 ## <b> Running the website </b>
 To set up the project, follow these steps:
 
 1. <b> Make sure to Install Required Python Packages </b>
+
   ```
   pip install transformers torch pandas scikit-learn flask flask-cors SpeechRecognition pydub
   ```
 2. <b> Set up the Frontend </b>
+
   ```
   cd frontend
   npm install
   npm start
   ```
 3. <b> Run the Flask Application </b>
-  ```
-  python3 -u "/home/sean/Desktop/Repositories/Team-Survivor/app.py"
-  ```
+
+  Open ``app.py`` and run the code.
 
 
 ## Helpful Sources
